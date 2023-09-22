@@ -1,0 +1,10 @@
+/* products.module.css */
+
+/* Style for the active link */
+.active {
+  color: blue; /* Change the text color for the active link */
+  font-weight: bold; /* Make the active link text bold */
+  /* Add any other styles you want for the active link */
+}
+
+/* Add any other styles for non-active links here */

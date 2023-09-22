@@ -4,6 +4,7 @@ import HomePage from "./pages/Home";
 import ProductPage from "./pages/Products";
 import RootLayout from "./pages/Root";
 import ErrorPage from "./pages/ErrorPage";
+import ProductDetailPage from "./pages/ProductDetail";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<RootLayout />}>
           <Route path="/products" element={<ProductPage />} />
           <Route path="/home" element={<HomePage />} />
+          <Route path='/products/:productId' element={<ProductDetailPage/>}></Route>
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
@@ -20,3 +22,4 @@ function App() {
 }
 
 export default App;
+
