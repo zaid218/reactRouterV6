@@ -1,5 +1,5 @@
 import * as React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes, Outlet, BrowserRouter } from "react-router-dom";
 import HomePage from "./pages/Home";
 import ProductPage from "./pages/Products";
 import RootLayout from "./pages/Root";
@@ -10,10 +10,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/root" element={<RootLayout />}>
+        <Route path="/" element={<RootLayout />}>
+          <Route index path='' element={<HomePage />} />
           <Route path="products" element={<ProductPage />} />
-          <Route path="home" element={<HomePage />} />
-          <Route path='products/:productId' element={<ProductDetailPage/>}></Route>
+          <Route path="products/:productId" element={<ProductDetailPage />} />
+          <Route index element={<Outlet />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
@@ -22,4 +23,3 @@ function App() {
 }
 
 export default App;
-
