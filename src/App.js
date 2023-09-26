@@ -10,10 +10,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<RootLayout />}>
-          <Route path="/products" element={<ProductPage />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route path='/products/:productId' element={<ProductDetailPage/>}></Route>
+        <Route path="/root" element={<RootLayout />}>
+          <Route path="products" element={<ProductPage />} />
+          <Route path="home" element={<HomePage />} />
+          <Route path='products/:productId' element={<ProductDetailPage/>}></Route>
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
